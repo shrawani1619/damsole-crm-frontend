@@ -83,7 +83,7 @@ export default function Hero() {
                                 <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#4F46E5', animation: 'pulseDot 2s ease-in-out infinite' }} />
                             </span>
                             <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#374151' }}>
-                                AI-Powered · Manchar, India 🇮🇳
+                                AI-Powered
                             </span>
                         </div>
 

@@ -3,15 +3,11 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 import p1 from '../assets/p1.png';
 import p2 from '../assets/p2.png';
 import p3 from '../assets/p3.png';
-import p4 from '../assets/p4.png';
 
 const PROJECTS = [
-    { id: 1, title: 'Elevator CRM', cat: 'Logistics', desc: 'Specialised CRM for lift maintenance, automated dispatching, asset tracking, and SLA management.', img: p1, tech: ['React', 'Node.js', 'Postgres'], color: '#4F46E5', bg: '#EEF2FF' },
-    { id: 2, title: 'Real Estate CRM', cat: 'Property', desc: 'Lead management, property listings, and automated agent workflows tailored for modern real estate brokerages.', img: p2, tech: ['Next.js', 'Python', 'Redis'], color: '#7C3AED', bg: '#F3E8FF' },
-    { id: 3, title: 'Finance CRM', cat: 'Finance', desc: 'Secure advisor portal for client portfolio management, compliance tracking, and document vaulting.', img: p3, tech: ['React', 'Java', 'AWS'], color: '#EC4899', bg: '#FCE7F3' },
-    { id: 4, title: 'Marine CRM', cat: 'Maritime', desc: 'Fleet management, crew scheduling, and logistics tracking built specifically for the maritime shipping industry.', img: p4, tech: ['Vue.js', 'Go', 'Docker'], color: '#06B6D4', bg: '#CFFAFE' },
-    { id: 5, title: 'Alvasco CRM', cat: 'Enterprise', desc: 'Custom enterprise resource planning and customer relationship management suite built for Alvasco Group.', img: p2, tech: ['React', 'GraphQL', 'NestJS'], color: '#10B981', bg: '#D1FAE5' },
-    { id: 6, title: 'Rada CRM', cat: 'B2B Sales', desc: 'High-velocity sales CRM featuring intelligent deal scoring, pipeline automation, and deep analytics.', img: p3, tech: ['Angular', 'Node.js', 'MongoDB'], color: '#F59E0B', bg: '#FEF3C7' },
+    { id: 1, title: 'Elevator CRM', cat: 'Logistics', desc: 'Specialised CRM for lift maintenance, automated dispatching, asset tracking, and SLA management.', img: p1, tech: ['React', 'Node.js', 'Postgres'], color: '#4F46E5', bg: '#EEF2FF', demoUrl: 'https://damsoleelevatorcrm.netlify.app/' },
+    { id: 2, title: 'Real Estate CRM', cat: 'Property', desc: 'Lead management, property listings, and automated agent workflows tailored for modern real estate brokerages.', img: p2, tech: ['Next.js', 'Python', 'Redis'], color: '#7C3AED', bg: '#F3E8FF', demoUrl: 'https://damsole-realestate-crm.vercel.app' },
+    { id: 3, title: 'Finance CRM', cat: 'Finance', desc: 'Secure advisor portal for client portfolio management, compliance tracking, and document vaulting.', img: p3, tech: ['React', 'Java', 'AWS'], color: '#EC4899', bg: '#FCE7F3', demoUrl: 'https://damsolefinserv-frontend.vercel.app/login' },
 ];
 
 export default function ProjectPortfolio() {
@@ -160,7 +156,7 @@ export default function ProjectPortfolio() {
                                     }}>
                                         {p.title}
                                     </h3>
-                                    <a href="#" aria-label={`View ${p.title} Live`} style={{ color: p.color, padding: '4px' }}>
+                                    <a href={p.demoUrl} target={p.demoUrl !== '#' ? "_blank" : "_self"} rel="noopener noreferrer" aria-label={`View ${p.title} Live`} style={{ color: p.color, padding: '4px' }}>
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
@@ -174,25 +170,29 @@ export default function ProjectPortfolio() {
                                     {p.desc}
                                 </p>
 
-                                {/* Clean Action Footer - Fixed at bottom */}
                                 <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center' }}>
-                                    <button style={{
-                                        padding: '12px 24px',
-                                        background: 'linear-gradient(135deg, #4F46E5 0%, #EC4899 100%)',
-                                        border: 'none',
-                                        color: 'white',
-                                        borderRadius: '12px',
-                                        fontSize: '0.9375rem',
-                                        fontWeight: 700,
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '10px',
-                                        transition: 'all 0.3s cubic-bezier(0.22, 1, 0.36, 1)',
-                                        boxShadow: '0 8px 24px rgba(236, 72, 153, 0.25)',
-                                        width: '100%',
-                                        justifyContent: 'center'
-                                    }}
+                                    <a
+                                        href={p.demoUrl}
+                                        target={p.demoUrl !== '#' ? "_blank" : "_self"}
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            padding: '12px 24px',
+                                            background: 'linear-gradient(135deg, #4F46E5 0%, #EC4899 100%)',
+                                            border: 'none',
+                                            color: 'white',
+                                            borderRadius: '12px',
+                                            fontSize: '0.9375rem',
+                                            fontWeight: 700,
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            transition: 'all 0.3s cubic-bezier(0.22, 1, 0.36, 1)',
+                                            boxShadow: '0 8px 24px rgba(236, 72, 153, 0.25)',
+                                            width: '100%',
+                                            justifyContent: 'center',
+                                            textDecoration: 'none'
+                                        }}
                                         onMouseEnter={e => {
                                             e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
                                             e.currentTarget.style.boxShadow = '0 12px 32px rgba(236, 72, 153, 0.35)';
@@ -204,8 +204,8 @@ export default function ProjectPortfolio() {
                                             e.currentTarget.style.filter = 'brightness(1)';
                                         }}
                                     >
-                                        View Case Study <ArrowRight size={18} />
-                                    </button>
+                                        Get Demo <ArrowRight size={18} />
+                                    </a>
                                 </div>
                             </div>
                         </article>
@@ -222,6 +222,6 @@ export default function ProjectPortfolio() {
           .premium-project-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
         }
       `}</style>
-        </section>
+        </section >
     );
 }
