@@ -71,9 +71,14 @@ export default function Navbar() {
                         <a
                             href="#home"
                             style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}
-                            aria-label="AiDamsole home"
+                            aria-label="Damsole home"
                         >
-                            <img src="https://aidamsole.com/Logo.png" alt="AiDamsole Logo" style={{ height: '48px', width: 'auto', display: 'block' }} />
+                            {/* Use local Damsole logo from public folder */}
+                            <img
+                                src="/damsole.png"
+                                alt="Damsole Logo"
+                                style={{ height: '48px', width: 'auto', display: 'block' }}
+                            />
                         </a>
 
                         {/* Desktop nav */}

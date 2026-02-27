@@ -3,11 +3,24 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 import p1 from '../assets/p1.png';
 import p2 from '../assets/p2.png';
 import p3 from '../assets/p3.png';
+import p4 from '../assets/p4.png';
 
 const PROJECTS = [
     { id: 1, title: 'Elevator CRM', cat: 'Logistics', desc: 'Specialised CRM for lift maintenance, automated dispatching, asset tracking, and SLA management.', img: p1, tech: ['React', 'Node.js', 'Postgres'], color: '#4F46E5', bg: '#EEF2FF', demoUrl: 'https://damsoleelevatorcrm.netlify.app/' },
     { id: 2, title: 'Real Estate CRM', cat: 'Property', desc: 'Lead management, property listings, and automated agent workflows tailored for modern real estate brokerages.', img: p2, tech: ['Next.js', 'Python', 'Redis'], color: '#7C3AED', bg: '#F3E8FF', demoUrl: 'https://damsole-realestate-crm.vercel.app' },
     { id: 3, title: 'Finance CRM', cat: 'Finance', desc: 'Secure advisor portal for client portfolio management, compliance tracking, and document vaulting.', img: p3, tech: ['React', 'Java', 'AWS'], color: '#EC4899', bg: '#FCE7F3', demoUrl: 'https://damsolefinserv-frontend.vercel.app/login' },
+    {
+        id: 4,
+        title: 'Manufacturel CRM',
+        cat: 'Manufacturing',
+        desc: 'Production-ready CRM for manufacturers to manage distributors, orders, inventory, and service workflows in one place.',
+        img: p4,
+        tech: ['React', 'Node.js', 'Postgres'],
+        color: '#0EA5E9',
+        bg: '#E0F2FE',
+        // Use full URL with protocol so the button opens the correct website
+        demoUrl: 'https://aidamsole-manufacturing-frontend.vercel.app',
+    },
 ];
 
 export default function ProjectPortfolio() {
