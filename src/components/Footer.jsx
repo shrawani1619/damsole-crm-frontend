@@ -11,7 +11,7 @@ const LINKS = {
         { label: 'Elevator CRM', href: '#portfolio' },
         { label: 'Real Estate CRM', href: '#portfolio' },
         { label: 'Finance CRM', href: '#portfolio' },
-        { label: 'Rada CRM', href: '#portfolio' },
+        { label: 'Radan CRM', href: '#portfolio' },
     ],
     Legal: [
         { label: 'Privacy Policy', href: '#' },
